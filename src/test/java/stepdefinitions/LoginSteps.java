@@ -1,12 +1,15 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class LoginSteps {
-
+    WebDriver driver;
     @Given("user is on login page")
-    public void user_is_on_login_page() {
+    public void user_is_on_login_page() throws InterruptedException {
+        driver.get("https://chatgpt.com");
+        Thread.sleep(3000);
         System.out.println("User navigates to login page");
     }
 
