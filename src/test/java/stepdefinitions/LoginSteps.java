@@ -17,11 +17,12 @@ public class LoginSteps {
 
     @When("user enters valid credentials")
     public void user_enters_valid_credentials() {
-        System.out.println("User enters username and password");
+        System.out.println("Title of the Page "+ driver.getTitle());
     }
 
     @Then("user is redirected to the dashboard")
     public void user_is_redirected_to_the_dashboard() {
         System.out.println("User sees the dashboard");
+        driver.quit();
     }
 }
