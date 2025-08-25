@@ -3,20 +3,22 @@ package stepdefinitions;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
+import org.testng.Assert;
+
 
 public class LoginSteps {
     WebDriver driver;
     @Given("user is on login page")
     public void user_is_on_login_page() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.get("https://chatgpt.com");
+        driver.get("https://www.google.com");
         Thread.sleep(3000);
         System.out.println("User navigates to login page");
     }
 
     @When("user enters valid credentials")
     public void user_enters_valid_credentials() {
+        Assert.assertEquals("abc",driver.getTitle());
         System.out.println("Title of the Page "+ driver.getTitle());
     }
 
