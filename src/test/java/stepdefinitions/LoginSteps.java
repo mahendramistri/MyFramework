@@ -18,7 +18,7 @@ public class LoginSteps {
 
     @When("user enters valid credentials")
     public void user_enters_valid_credentials() {
-        Assert.assertEquals("abc",driver.getTitle());
+        Assert.assertEquals("Google",driver.getTitle());
         System.out.println("Title of the Page "+ driver.getTitle());
     }
 
